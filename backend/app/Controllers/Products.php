@@ -94,9 +94,9 @@ class Products extends ResourceController
     ];
 
     $ProductModel = new ProductModel();
-    $data = $ProductModel->find($id);
+    $product = $ProductModel->find($id);
 
-    if (!$data) return $this->failNotFound("No Data Found");
+    if (!$product) return $this->failNotFound("No Data Found");
 
     $ProductModel->update($id, $data);
 
